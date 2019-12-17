@@ -13,6 +13,11 @@ var expresshandlebars = require("express-handlebars");
 app.engine("handlebars", expresshandlebars({ defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
-var routes =()
+var routes =("./controllers/burgersControllers.js");
 
+app.use(routes);
+
+app.listen(PORT,function(){
+    console.log("App is working on port:%s", PORT);
+})
 
