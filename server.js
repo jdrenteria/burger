@@ -13,7 +13,7 @@ var expresshandlebars = require("express-handlebars");
 app.engine("handlebars", expresshandlebars({ defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
-var routes =("./controllers/burgersControllers.js");
+var routes = require("./controllers/burgerControllers.js");
 
 app.use(routes);
 
